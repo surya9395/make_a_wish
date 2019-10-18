@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display</title>
+</head>
+<body style="background-image: url('{% static "images/pic3.jpeg" %}');background-size: cover;background-repeat:no-repeat">
+
+<h1 align="center"> WISH LIST</h1><hr/>
+<h2><a href="/">HOME</a></h2>
+        <table border="1" align="center">
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>WISH</th>
+                <th>DATE</th>
+            </tr>
+            {% for i in qry1 %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.wish}}</td>
+                <td>{{i.date | date}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+</body>
+</html>

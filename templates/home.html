@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WISH</title>
+</head>
+<body style="background-image: url('{% static "images/pic4.jpg" %}');background-size: cover;background-repeat:no-repeat">
+
+<form action = "details" method="post">
+    {% csrf_token %}
+<h1 align="center"> MAKE A WISH</h1><hr/>
+   <h2> <a href="/display">Wishlist</a></h2>
+
+        <table align="center">
+             <tr>
+                    <td>NAME:</td>
+                    <td><input type="text" name="t1" placeholder="NAME"></td>
+             </tr>
+              <tr>
+                    <td>WISH:</td>
+                    <td><input type="text" name="t2" placeholder="WISH"</td>
+              </tr>
+               <tr>
+                    <td>DATE:</td>
+                    <td><input type="date" name="t3"</td>
+               </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" name="submit"/>
+                    </td>
+                </tr>
+
+
+        </table>
+</form>
+</body>
+</html>
